@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+    <link rel="stylesheet" href="ajax.css">
+</head>
+
+<body>
+    <h1>AJAX</h1>
+    <p>
+        <strong>AJAX</strong> - Asynchronous JavaScript And XML -
+        технологія асинхронного обміну даними між клієнтом (JS) та сервером (поза браузером). Історично передбачався
+        обмін в XML форматі, на сьогодні більш поширений JSON, але назва технології зберігається.
+    </p>
+    <p>
+        Запит даних ініціюється (запускається) методом <code>fetch</code> Обов'язковий параметр - URL (адреса) даних.
+        Оскільки запит асинхронний, його слід очікувати (await) або задавати функцію продовження
+        <code>.then(r => {} )</code>, яка одержує відповідь (г - response) від запиту. З відповіді можна дізнатись
+        статус-код, заголовки та ініціювати (запустити) процедуру видобутку тіла відповіді.
+        Тіло можна видобувати в одному з форматів:
+        <code>.text()</code> як текст,
+        <code>.json()</code> - як JSON,
+        <code>.blob(), arrayBuffer()</code> - як бінарні дані.
+    </p>
+    <div>
+        <button id="load-rates-button">Загрузить курс валют</button>
+        <input type="date" id="load-rates-date">
+    </div>
+    <div id="out-block"></div>
+
+    <script src="ajax.js"></script>
+</body>
+
+</html>

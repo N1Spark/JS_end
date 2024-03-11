@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Basics</title>
+</head>
+
+<body>
+    <h1>Основы JavaScript</h1>
+    <p>Середовища виконання - браузер</p>
+    <ul>
+        <li>
+            В атрибути тегив: <b onclick="alert('I was clicked')">Click me</b>
+        </li>
+        <li>
+            Окремим тегом &lt;script> з тилом у вигляди коду
+            <script>console.log('Hello world!')</script>
+        </li>
+        <li>
+            Тег &lt;script> з посилянням на джерело (окремий файл з кодом)
+        </li>
+    </ul>
+    <p>
+        Змишувати тило та джерело тегу неможна, одне буде игрноруване.
+        Тег &lt;script> може бути як у "голови", так и в тили HTML.
+        Вид цього залежить момент його завантаження и виконання.
+        З одного боку, якщо скрипт у "голови", то вин гаратовано вдпрацюе до завантаження сторинки.
+        З иншого боку, у такому скрипти не будуть доступни елементи самои сторинки, оскильки вона ще
+        не завантаженна. У бильшости випадкив 
+    </p>
+    <script src="script1.js"></script>
+</body>
+
+</html>

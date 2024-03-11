@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="canvas.css" />
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper light-blue">
+            <a href="index.html" class="brand-logo center">JavaScript</a>
+        </div>
+    </nav>
+    <div class="container">
+
+        <h1>Полотно. Засоби рисування</h1>
+        <div>
+            Основу для створення складних зображень дає елемент &lt; canvas> - полотно.
+            З урахуванням особливості DOM - перезбирати весь документ після довільної
+            зміни - полотна надають покращені можливості створення динамічного контенту.
+        </div>
+        <canvas id="figure"></canvas>
+        <div>
+            Лінії. Ідея рисування ліній полягає у
+            комбінації двох операцій -
+            переміщення "каретки" без сліду, та переміщення зі слідом.
+            <div style="display: flex; gap: 30px;">
+                <div>
+                    <input type="color" id="X-color-input" placeholder="цвет оси Х">
+                    <button class="btn btn-flat indigo white-text" id="line-1-button">Нарисувати лiнiю</button>
+                </div>
+                <div>
+                    <input type="color" id="Y-color-input" placeholder="цвет оси Y">
+                    <button class="btn btn-flat deep-purple white-text" id="line-2-button">Нарисувати лiнiю</button>
+                </div>
+                <div>
+                    <input type="color" id="Cos-color-input" placeholder="цвет параболы">
+                    <button class="btn btn-flat teal white-text" id="cos-button">COS(x)</button>
+                </div>
+            </div>
+            За замовчанням розмір полотна 300 X 150 пікселів.
+            При цьому важливо розуміти, що є розміри, а є роздільна здатність.
+            Якщо стилями змінити розмір полотна, то його роздільна здатність не
+            зміниться, при збільшенні проявиться піксельна структура.
+            <button class="btn btn-flat blue white-text" id="expand-button">Збiльшити розмiр</button>
+            <button class="btn btn-flat orange white-text" id="resolution-button">Збiльшити роздiльнiсть</button>
+        </div>
+        <hr />
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <h2>Курсы валют</h2>
+            <button class="btn btn-flat deep-orange darken-1" id="clear-rates">Clear</button>
+        </div>
+        <div class="row">
+            <div class="col s3" id="assets-block">
+                <a href="#1" class="btn btn-flat blue lighten-5 rate-button">Bitcoin</a>
+                <a href="#1" class="btn btn-flat pink lighten-5 rate-button">Bitcoin</a>
+                <a href="#1" class="btn btn-flat green lighten-5 rate-button">Bitcoin</a>
+            </div>
+            <div class="col s9">
+                <canvas id="rates-canvas">
+
+                </canvas>
+            </div>
+            
+        </div>
+        <p>
+            JavaScript у браузері є ряд обмежень, зокрема, доступ до файлової системи.
+            Для задач збереження даних браузер надає декілька засобів, доступних для
+            вкладці "Application" інструментів розробника (консолі):
+        </p>
+        <ul>
+            <li>Local Storage - постійне сховище</li>
+            <li>Session Storage - тимчасове сховище</li>
+            <li>Indexed DB - для великих даних типу "ключ-значення"</li>
+        </ul>
+        <div class="row">
+            <div class="col s1">
+                <span id="local-period"></span>
+            </div>
+            <div class="input-field col s5">
+                <input id="local-input"/>
+            </div>
+            <div class="col s4">
+                <button class="btn" id="local-button">Save in Local Storage</button>
+            </div>
+            <div class="col s2">
+                <button class="btn pink white-text" id="local-delete">Delete Local</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s1">
+                <span id="session-period"></span>
+            </div>
+            <div class="input-field col s5">
+                <input id="session-input"/>
+                <input type="time" id="session-timer"/>
+            </div>
+            <div class="col s4">
+                <button class="btn" id="session-button">Save in Session Storage</button>
+            </div>
+            <div class="col s2">
+                <button class="btn pink white-text" id="session-delete">Delete Session</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="canvas.js"></script>
+</body>
+
+</html>

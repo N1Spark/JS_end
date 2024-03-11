@@ -1,0 +1,14 @@
+#figure {
+  border: 1px solid gray;
+  
+}
+
+#rates-canvas{
+  border: 1px solid gray;
+  width: 100%;
+}
+
+.rate-button{
+  display: block;
+  margin: 5px 0;
+}

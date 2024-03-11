@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+
+<body>
+  <h1>Document Object Model(DOM)</h1>
+  <p>
+    DOM - концепция згидно з якою вси HTML елементи видображаються на объекти (ООП) JS.
+    Це видображення двобичне: змина HTML видбуваеться на структури объектив, а змина струтури объектив - на HTML.
+    Иншими словами, немае ризници як манипулювати сторинкою - через вплив на HTML чи шляхом змини объектив(и колекции).
+  </p>
+  <input class="name-input " id="user-name" placeholder="Your Name" />
+  <input class="surname-input " id="user-surname" placeholder="Your Surname" />
+  <button onclick="helloClick()">Say hello</button>
+  <p id="out-block"></p>
+
+  <div style="border: 1px solid gray; padding: 7px 12px; display: inline-block;">
+    <button type="button" id="decrement-button">--</button>
+    <b style="margin: 0 5px;" id="calc-value">10</b>
+    <button type="button" id="increment-button">++</button>
+  </div>
+  </br>
+  <div style="border: 1px solid gray; padding: 7px 12px; display: inline-block;">
+    <button type="button" id="decrement-button2">--</button>
+    <b style="margin: 0 5px;" id="calc-value2">10</b>
+    <button type="button" id="increment-button2">++</button>
+  </div>
+
+  <script src="dom.js"></script>
+</body>
+
+</html>

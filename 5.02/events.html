@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="events.css">
+</head>
+<body>
+    <div class="dnd-container" id="dnd-zone">
+        <h2>Drag'n Drop</h2>
+        <div class="blue circle" data-type="draggable"></div>
+        <div class="green circle" data-type="draggable"></div>
+        <div class="red circle" data-type="draggable"></div>
+        <div class="square" draggable="true" ondragstart="event.dataTransfer.effectAllowed='move'"></div>
+ 
+        <div class="dnd-target dnd-positive" data-type="dnd-targ"
+            ondragover="event.dataTransfer.dropEffect='move'; event.preventDefault()"></div>
+        <div class="dnd-target dnd-negative" data-type="dnd-targ"></div>
+    </div>
+    <h1>События в JavaScript</h1>
+    <p>
+        <a href="https://www.w3schools.com/jsref/dom_obj_event.asp">
+            Перелiк подiй
+        </a>
+        <br/>
+        <a href="https://www.w3.org/TR/DOM-Level-2-Events/events.html">
+        </a>
+    </p>
+    
+    <div>
+        <p>
+            Универсальным полем в события это <code>target</code><br/>
+            Через него можно узнать источник событии, его характеристики 
+            и атрибуты
+        </p>
+        <div class="div1" id="div1" data-info="info 1-1">Click me</div>
+        target: <span></span>
+    </div>
+    <div>
+        <p>
+            Если в состав элемента комбинированный (не только текст) 
+            например тег стиля &lt;b>, то источник событии отличается в зависимости 
+            от того, на какую составляющую часть курсор показывал в момент событии 
+            (стоит кликнуть а) на текст б) за текстом ).
+        </p>
+        <div class="div1" id="div1-2" data-info="info 1-2"><b>Click me</b></div>
+        target: <span></span><br/>
+        <b>Bubbling </b> событий - процесс его передачи за иерархией элементов (до родительскых узлов)
+    </div>
+    <div>
+        <p>
+            Елементи, обробники яких аналізують <code>target</code>
+            частіше за все, генеруються автоматично (у коді
+            з аналізу даних). Для передачі до елементу його
+            даних використовуються <code>data-</code> атрибути.
+        </p>
+        <div class="div1" id="div1-3" data-info="info 1-3">
+            <img src="1.jpg" alt="img">
+            <b><i>Click me</i></b>
+        </div>
+        target: <span></span><br/>
+        <p>
+            Для решения задачи используется метод <code>closest</code> 
+            который есть CSS-селектор и ищет ближайший за иерархией элемент, 
+            который относиться селектору
+        </p>
+    </div>
+    <h2>Клавиатурные события</h2>
+    <div>
+        <input id="input1"> <span></span>
+    </div>
+
+    <script src="events.js"></script>
+</body>
+</html>

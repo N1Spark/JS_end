@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complex</title>
+  <style>
+    button[data-key] {
+      background: fuchsia;
+      color: snow;
+      font-weight: 500;
+    }
+    .users-block {
+            background-color: antiquewhite;
+            border: 1px solid gray;
+            margin: 5px auto;
+            padding: 5px 10px;
+            width: 75vw;
+        }
+  </style>
+</head>
+
+<body>
+  <h1>Комплексни типи даних: масивиб объекти</h1>
+  <h2>Объекти</h2>
+  <p>
+    Объекти JS можуть зминювати свий склад протягом роботи програми.
+  </p>
+  <div style="display: flex; width: 75vw; margin: auto;">
+    <div style="border: 1px solid gray;">
+      <h3>Наявни поля объекту</h3>
+      <div id="current-fields"></div>
+    </div>
+    <div style="border: 1px solid gray;">
+      <h3>Додати нове поле</h3>
+      <label><input id="add-field-name" placeholder="name" /> </label>
+      <label><input id="add-field-value" placeholder="value" /> </label>
+      <button id="add-field-button" type="button">Додати</button>
+    </div>
+
+
+  </div>
+  <div class="users-block">
+    <div id="registered-users"></div>
+    <label> <input placeholder="name"></label>
+    <label> <input placeholder="surname"></label>
+    <button type="button">Зарегистрироваться</button>
+  </div>
+  <script src="complex.js"></script>
+</body>
+
+</html>

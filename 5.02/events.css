@@ -1,0 +1,67 @@
+.div1{
+  padding: 5px 10px;
+  background-color: rgb(183, 183, 169);
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+  margin: 10px;
+}
+
+.div1 img, .div1 b{
+  max-height: 23px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.dnd-container{
+  border: 2px solid gray;
+  float: right;
+  height: 90vh;
+  position: relative;
+  width: 50vw;
+}
+
+.circle{
+  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+}
+
+.blue{
+  background-color: cadetblue;
+}
+.green{
+  background-color: greenyellow;
+}
+.red{
+  background-color: red;
+}
+
+.transition{
+  transition: 0.3s;
+}
+
+[data-type="draggable"]{
+  z-index: 1;
+  position: absolute;
+}
+.dnd-target {
+  position: absolute;
+  bottom: 0;
+  height: 20vh;
+  width: 45%;
+}
+.dnd-positive {
+  background-color: lemonchiffon;
+  left: 0;
+}
+.dnd-negative {
+  background-color: papayawhip;
+  right: 0;
+}
+.square{
+  background-color: tomato;
+  height: 70px;
+  margin-top: 110px;
+  width: 70px;
+}
